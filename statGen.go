@@ -27,18 +27,13 @@ func statGen() []btsPos {
 	var x, y float64
 	var listOfBts []btsPos
 
+	s1 := rand.NewSource(time.Now().UnixNano())
+	r1 := rand.New(s1)
+
 	for i := 0; i < numOfStations; {
 
-		s1 := rand.NewSource(time.Now().UnixNano())
-		r1 := rand.New(s1)
-
-		s2 := rand.NewSource(time.Now().UnixNano())
-		r2 := rand.New(s2)
-
 		x = (r1.Float64() * radius) - radius/2
-		y = (r2.Float64() * radius) - radius/2
-
-		fmt.Printf("%d) x: %f, y: %f ", i+1, x, y)
+		y = (r1.Float64() * radius) - radius/2
 
 		if (math.Pow(x, 2) + math.Pow(y, 2)) < math.Pow(radius, 2) {
 			newBts := btsPos{x, y}
