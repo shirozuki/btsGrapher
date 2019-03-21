@@ -1,22 +1,13 @@
 package main
 
 import (
-	"fmt"
 	"math"
 	"math/rand"
 	"time"
 )
 
-func statGen() []btsPos {
+func statGen(radius float64, numOfStations int, stationRange float64) []btsPos {
 
-	var radius, stationRange float64
-	var numOfStations int
-	fmt.Printf("Promień: ")
-	fmt.Scan(&radius)
-	fmt.Printf("Liczba stacji: ")
-	fmt.Scan(&numOfStations)
-	fmt.Printf("Zasięg: ")
-	fmt.Scan(&stationRange)
 
 	// Środek okręgu ustalony na [0,0]
 
