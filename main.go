@@ -13,13 +13,16 @@ func main() {
 	fmt.Printf("Zasięg: ")
 	fmt.Scan(&stationRange)
 
-
 	listOfBts := statGen(radius, numOfStations, stationRange)
 
 	for i := 0; i < len(listOfBts); i++ {
-		fmt.Println(listOfBts[i])
+		fmt.Println("Stacja", i+1, listOfBts[i])
 	}
 
-	conflictDetection(listOfBts, 1)
+	conflictMap := conflictDetection(listOfBts, stationRange)
+
+	fmt.Println(conflictMap)
+
+	generateFile(numOfStations, listOfBts, conflictMap)
 
 }

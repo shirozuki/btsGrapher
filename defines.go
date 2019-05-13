@@ -32,3 +32,8 @@ type Edge struct {
 	From    string   `xml:"from,attr"`
 	To      string   `xml:"to,attr"`
 }
+
+type Conflict struct {
+	a int
+	b int
+}
