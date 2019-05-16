@@ -8,13 +8,6 @@ import (
 
 func statGen(radius float64, numOfStations int, stationRange float64) []btsPos {
 
-
-	// Środek okręgu ustalony na [0,0]
-
-	// koncept: random generujący się w zależności od podanego R.
-	// 			niech generuje się w kwadracie, czyli na osi współrzędnych.
-	//			Następnie sprawdzenie, czy punkt nie padł za daleko od środka koła (czy odległość między punktem a środkiem nie jest większa niż r)
-
 	var x, y float64
 	var listOfBts []btsPos
 

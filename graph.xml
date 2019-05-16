@@ -3,64 +3,103 @@
 <gxl>
 <graph>
 <node id="1">
-<x>-0.928489</x>
-<y>0.122606</y>
+<x>1.571683</x>
+<y>-2.188232</y>
 </node>
 <node id="2">
-<x>-1.030274</x>
-<y>-1.229549</y>
+<x>-4.254599</x>
+<y>-0.881855</y>
 </node>
 <node id="3">
-<x>2.800808</x>
-<y>2.639475</y>
+<x>-4.936644</x>
+<y>-3.613956</y>
 </node>
 <node id="4">
-<x>4.598473</x>
-<y>-3.214448</y>
+<x>0.886667</x>
+<y>-1.022441</y>
 </node>
 <node id="5">
-<x>-4.502889</x>
-<y>0.412598</y>
+<x>3.271560</x>
+<y>0.598984</y>
 </node>
 <node id="6">
-<x>2.238900</x>
-<y>-1.852930</y>
+<x>3.571367</x>
+<y>-1.075245</y>
 </node>
 <node id="7">
-<x>-0.270497</x>
-<y>3.760771</y>
+<x>4.981691</x>
+<y>-2.437929</y>
 </node>
 <node id="8">
-<x>1.062894</x>
-<y>-2.519455</y>
+<x>0.918975</x>
+<y>0.721535</y>
 </node>
 <node id="9">
-<x>-2.631591</x>
-<y>-1.258545</y>
+<x>-2.068860</x>
+<y>-4.838316</y>
 </node>
 <node id="10">
-<x>0.264324</x>
-<y>1.686398</y>
+<x>3.106519</x>
+<y>3.865355</y>
 </node>
-<edge id="1" from="1" to="2" />
-<edge id="2" from="1" to="5" />
-<edge id="3" from="1" to="6" />
-<edge id="4" from="1" to="7" />
-<edge id="5" from="1" to="8" />
-<edge id="6" from="1" to="9" />
-<edge id="7" from="1" to="10" />
-<edge id="8" from="2" to="5" />
-<edge id="9" from="2" to="6" />
-<edge id="10" from="2" to="8" />
-<edge id="11" from="2" to="9" />
-<edge id="12" from="2" to="10" />
-<edge id="13" from="3" to="7" />
-<edge id="14" from="3" to="10" />
-<edge id="15" from="4" to="6" />
-<edge id="16" from="4" to="8" />
-<edge id="17" from="5" to="9" />
-<edge id="18" from="6" to="8" />
-<edge id="19" from="7" to="10" />
-<edge id="20" from="8" to="9" />
+<node id="11">
+<x>-3.109434</x>
+<y>3.557657</y>
+</node>
+<node id="12">
+<x>1.803478</x>
+<y>-4.782678</y>
+</node>
+<node id="13">
+<x>3.888188</x>
+<y>2.714167</y>
+</node>
+<node id="14">
+<x>4.713966</x>
+<y>4.071808</y>
+</node>
+<node id="15">
+<x>0.986637</x>
+<y>0.433359</y>
+</node>
+<node id="16">
+<x>-4.789976</x>
+<y>-1.246755</y>
+</node>
+<node id="17">
+<x>-0.148548</x>
+<y>1.691212</y>
+</node>
+<node id="18">
+<x>-1.525904</x>
+<y>-4.578025</y>
+</node>
+<node id="19">
+<x>1.580020</x>
+<y>-0.165686</y>
+</node>
+<node id="20">
+<x>3.953468</x>
+<y>-1.636949</y>
+</node>
+<edge id="1" from="1" to="4" />
+<edge id="2" from="2" to="16" />
+<edge id="3" from="4" to="8" />
+<edge id="4" from="4" to="15" />
+<edge id="5" from="4" to="19" />
+<edge id="6" from="5" to="6" />
+<edge id="7" from="5" to="19" />
+<edge id="8" from="6" to="7" />
+<edge id="9" from="6" to="20" />
+<edge id="10" from="7" to="20" />
+<edge id="11" from="8" to="15" />
+<edge id="12" from="8" to="17" />
+<edge id="13" from="8" to="19" />
+<edge id="14" from="9" to="18" />
+<edge id="15" from="10" to="13" />
+<edge id="16" from="10" to="14" />
+<edge id="17" from="13" to="14" />
+<edge id="18" from="15" to="17" />
+<edge id="19" from="15" to="19" />
 </graph>
 </gxl>

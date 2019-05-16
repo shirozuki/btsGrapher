@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+	"os/exec"
+)
 
 func main() {
 
@@ -16,13 +20,23 @@ func main() {
 	listOfBts := statGen(radius, numOfStations, stationRange)
 
 	for i := 0; i < len(listOfBts); i++ {
-		fmt.Println("Stacja", i+1, listOfBts[i])
+		fmt.Println("Stacja", i+1, ":", listOfBts[i])
 	}
 
 	conflictMap := conflictDetection(listOfBts, stationRange)
 
-	fmt.Println(conflictMap)
+	//fmt.Println(conflictMap)
 
 	generateFile(numOfStations, listOfBts, conflictMap)
+
+	fmt.Println("-------------------------------------------------")
+
+	cmd := exec.Command("python", "./assignFreq.py")
+	cmd.Stdout = os.Stdout
+	cmd.Stderr = os.Stderr
+	cmd.Run()
+
+	os.Remove("graph.connections")
+	os.Remove("graph.plain")
 
 }

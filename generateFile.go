@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"os"
 	"strconv"
 	"strings"
@@ -58,10 +57,27 @@ func generateFile(numOfStations int, listOfBts []btsPos, conflictMap []Conflict)
 
 	buffer = append(buffer, "</graph>\n")
 	buffer = append(buffer, "</gxl>\n")
-	fmt.Println(buffer)
+	//fmt.Println(buffer)
 
 	outputStr := strings.Join(buffer, "")
 
 	file.WriteString(outputStr)
+
+	plainFile, err := os.Create("graph.plain")
+	defer plainFile.Close()
+
+	if err != nil {
+		panic(err)
+	}
+
+	for i := 0; i < len(conflictMap); i++ {
+		tmp1 := strconv.Itoa(conflictMap[i].a + 1)
+		tmp2 := strconv.Itoa(conflictMap[i].b + 1)
+		buffer := tmp1 + " " + tmp2 + "\n"
+		plainFile.WriteString(buffer)
+	}
+
+	file.Close()
+	plainFile.Close()
 
 }
